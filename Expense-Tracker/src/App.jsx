@@ -1,11 +1,9 @@
-
-
-import React, { useContext } from 'react';
-import { ExpenseContext } from './context/ExpenseContext';
-import LoginPage from './components/LoginPage';
-import Dashboard from './components/Dashboard';
-import ExpenseForm from './components/ExpenseForm';
-import ExpenseList from './components/ExpenseList';
+import React, { useContext } from "react";
+import { ExpenseContext } from "./context/ExpenseContext";
+import LoginPage from "./components/LoginPage";
+import Dashboard from "./components/Dashboard";
+import ExpenseForm from "./components/ExpenseForm";
+import ExpenseList from "./components/ExpenseList";
 
 function App() {
   const { user, logout } = useContext(ExpenseContext);
@@ -19,7 +17,12 @@ function App() {
           <span className="font-bold text-xl text-blue-600">SpendWise</span>
           <div className="flex items-center gap-4">
             <span className="capitalize font-medium">Hello, {user}</span>
-            <button onClick={logout} className="text-sm text-red-500 hover:font-bold">Logout</button>
+            <button
+              onClick={logout}
+              className="text-sm text-red-500 hover:font-bold"
+            >
+              Logout
+            </button>
           </div>
         </div>
       </nav>
